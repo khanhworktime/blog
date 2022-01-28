@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --inspect ./src/index.js",
     "sass": "node-sass -w src/resource/scss/ -o src/public/css/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,11 @@
     "url": "https://github.com/khanhworktime/nodejs_blog/issues"
   },
   "homepage": "https://github.com/khanhworktime/nodejs_blog#readme",
-
   "lint-staged": {
     "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4 --write \"src/**/*.{js,json,scss}\""
   },
-  "husky":{
-    "hooks":{
+  "husky": {
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
@@ -36,7 +36,7 @@
     "express-handlebars": "^6.0.2"
   },
   "devDependencies": {
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^12.3.2",
     "morgan": "^1.10.0",
     "node-sass": "^7.0.1",
